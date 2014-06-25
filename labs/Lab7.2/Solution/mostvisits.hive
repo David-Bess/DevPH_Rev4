@@ -1,0 +1,5 @@
+from wh_visits
+	select count(*) as visit_count, fname, lname 
+	group by fname, lname
+	order by visit_count desc
+	limit 20;

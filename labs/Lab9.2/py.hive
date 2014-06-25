@@ -1,0 +1,12 @@
+add file /tmp/max_order.py;
+set mapred.reduce.tasks=3;
+from (
+SELECT userid,ordertotal,itemlist
+from orders
+distribute by userid
+sort by userid,ordertotal DESC)
+orders
+insert overwrite directory 't1'
+reduce userid,ordertotal,itemlist
+using 'max_order.py';
+
