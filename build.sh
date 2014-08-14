@@ -16,4 +16,10 @@ apt-get update
 apt-get -y install mysql-client
 echo "alias mysql='mysql -h hiveserver'" >> /etc/profile
 
+#Fix bug in /etc/hosts (JIRA TRNG-715)
+echo "127.0.0.1       localhost     ubuntu" >> /etc/hosts
+
+#Containers start at bootup (JIRA TRNG-703)
+echo 'DOCKER_OPTS=" -r=true"' >> /etc/default/docker
+
 echo -e "\n*** The lab environment has successfully been built for this classroom VM ***\n"
