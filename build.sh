@@ -23,6 +23,6 @@ echo "127.0.0.1       localhost     ubuntu" >> /etc/hosts
 echo 'DOCKER_OPTS=" -r=true"' >> /etc/default/docker
 
 echo "Copying Tez config files..."
-cp /root/$COURSE_DIR/conf/* /etc/tez/conf/
+cp /root/DevPH_Rev4/conf/* /etc/tez/conf/
 
 echo -e "\n*** The lab environment has successfully been built for this classroom VM ***\n"
