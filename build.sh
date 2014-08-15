@@ -5,7 +5,7 @@
 #Need to rebuild hdp_node (but this can possibly be removed in future Revs of the VM
 echo -e "\n*** Building hwux/hdp_node ***\n"
 cd /root/dockerfiles/hdp_node
-docker build -t hwxu/hdp_node
+docker build -t hwxu/hdp_node .
 echo -e "\n*** Build of hwxu/hdp_node complete! ***\n"
 
 #Build hdp_hive_node
