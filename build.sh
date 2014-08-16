@@ -15,6 +15,7 @@ docker build -t hwxu/hdp_hive_node .
 echo -e "\n*** Build of hwxu/hdp_hive_node complete! ***\n"
 
 #Add custom tasks for Pig/Hive course here...
+apt-get -y install oozie-client
 apt-get -y install python-setuptools
 easy_install avro
 
