@@ -5,4 +5,4 @@ max_ordertotal.userid = orders.userid
 AND 
 max_ordertotal.maxtotal = orders.ordertotal;
 
-select order_date, sum(ordertotal) FROM orders GROUP BY order_date;
+select order_date, sum(ordertotal) FROM orders GROUP BY order_date;
