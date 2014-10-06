@@ -12,4 +12,4 @@ create table orders (
 row format delimited
 fields terminated by '\t';
 
-load data local inpath '/tmp/shop.tsv' overwrite into table orders;
+load data local inpath '/shop.tsv' overwrite into table orders;
