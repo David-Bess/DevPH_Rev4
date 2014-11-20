@@ -17,7 +17,7 @@ echo -e "\n*** Build of hwxu/hdp_hive_node complete! ***\n"
 #Add custom tasks for Pig/Hive course here...
 apt-get update
 
-apt-get -y install oozie-client
+apt-get -y --force-yes install oozie-client
 apt-get -y install python-setuptools
 easy_install avro
 
