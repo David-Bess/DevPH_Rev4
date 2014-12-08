@@ -14,6 +14,9 @@ cd /root/dockerfiles/hdp_hive_node
 docker build -t hwxu/hdp_hive_node .
 echo -e "\n*** Build of hwxu/hdp_hive_node complete! ***\n"
 
+#Fix a broken HDP repo location on the Ubuntu VM
+sed -i "s/deb http:\/\/public-repo-1.hortonworks.com\/HDP\/ubuntu12\/2.x HDP main/deb http:\/\/public-repo-1.hortonworks.com\/HDP\/ubuntu12\/2.1.3.0 HDP main/g" /etc/apt/sources.list.d/hdp.list
+
 #Add custom tasks for Pig/Hive course here...
 apt-get update
 
